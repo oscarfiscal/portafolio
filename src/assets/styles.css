@@ -1,0 +1,327 @@
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth; /* Scroll suave al navegar por anclas */
+  }
+  
+  body {
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    background-color: #0D1117;
+    line-height: 1.6;
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  #app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden; /* Evitar scroll horizontal por decoraciones */
+    position: relative;
+  }
+  
+  /* NAVBAR */
+  nav {
+    background-color: rgba(13, 17, 23, 0.8);
+    backdrop-filter: blur(8px);
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .nav__logo {
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #64f4ac; /* Color acento */
+  }
+  
+  .nav__menu {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .nav__menu li {
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+    cursor: pointer;
+  }
+  .nav__menu li:hover {
+    background-color: #1F2329;
+  }
+  
+  .nav__menu a {
+    font-weight: 400;
+    color: #f0f6fc;
+  }
+  
+  /* HERO */
+  header {
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    /* Fondo degradado animado */
+    background: linear-gradient(-45deg, #2176FF, #33A1FD, #57d8c9, #8eecf5);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    color: #fff;
+    padding: 2rem;
+  }
+  
+  @keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  header .hero-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  header .hero-title span {
+    color: #0D1117; /* Contraste fuerte */
+    background: rgba(255,255,255,0.7);
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+  }
+  
+  header .hero-subtitle {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  header p {
+    max-width: 600px;
+    margin: 0 auto 1.5rem auto;
+    color: #fdfdfd;
+  }
+  
+  .btn-cta {
+    padding: 0.75rem 1.5rem;
+    background: #64f4ac;
+    color: #0D1117;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: transform 0.3s ease, background 0.3s ease;
+    box-shadow: 0 5px 10px rgba(100, 244, 172, 0.3);
+  }
+  .btn-cta:hover {
+    transform: scale(1.05);
+    background: #52d193;
+  }
+  
+  /* Wave decorativo al final del header */
+  .wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+  }
+  
+  .wave svg {
+    display: block;
+    width: calc(132% + 1.3px);
+    height: 100px;
+  }
+  
+  /* SECCIONES GENERALES */
+  section {
+    padding: 5rem 1rem 3rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #64f4ac;
+  }
+  
+  /* SOBRE MÍ */
+  .about-content {
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.8;
+    color: #f0f6fc;
+    text-align: center;
+  }
+  .about-content p + p {
+    margin-top: 1rem;
+  }
+  
+  /* EXPERIENCIA */
+  .experience-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .exp-card {
+    background: #1F2329;
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .exp-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .exp-card h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    color: #64f4ac;
+  }
+  .exp-card .exp-dates {
+    margin-bottom: 0.5rem;
+    font-style: italic;
+    color: #ccc;
+  }
+  .exp-card ul {
+    list-style: disc inside;
+    line-height: 1.6;
+    color: #f0f6fc;
+  }
+  
+  /* HABILIDADES */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .skill-box {
+    background: #1F2329;
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  .skill-box:hover {
+    transform: translateY(-5px);
+  }
+  .skill-box h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    color: #64f4ac;
+  }
+  .skill-box p {
+    color: #f0f6fc;
+    line-height: 1.6;
+  }
+  
+  /* CONTACTO */
+  .contact-section {
+    text-align: center;
+    color: #f0f6fc;
+  }
+  .contact-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 450px;
+    margin: 2rem auto 1rem auto;
+  }
+  
+  .contact-section label {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-weight: 400;
+  }
+  .contact-section input,
+  .contact-section textarea {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    background: #fff;
+    color: #000;
+    font-size: 0.9rem;
+  }
+  .contact-section button {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    background: #64f4ac;
+    color: #0D1117;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  .contact-section button:hover {
+    background: #52d193;
+    transform: scale(1.05);
+  }
+  
+  .contact-section .status {
+    margin-top: 1rem;
+    color: #64f4ac;
+    font-weight: 600;
+  }
+  
+  /* FOOTER */
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background: #161B22;
+    color: #fff;
+    margin-top: auto;
+  }
+  
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    header .hero-title {
+      font-size: 2.2rem;
+    }
+  }
+  .contact-links {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  
+  .contact-links a {
+    color: #64f4ac;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+  
+  .contact-links a:hover {
+    color: #52d193;
+  }
+    
