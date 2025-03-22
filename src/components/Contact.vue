@@ -38,6 +38,7 @@
         <a href="mailto:oscarfiscal25@gmail.com" target="_blank">Correo</a>
         <a href="https://github.com/oscarfiscal" target="_blank">GitHub</a>
         <!-- Puedes agregar más como LinkedIn -->
+         <a href="https://www.linkedin.com/in/oscar-fiscal-277a741a6" target="_blank">LinkedIn</a>
       </div>
 
       <!-- Botón flotante de WhatsApp -->

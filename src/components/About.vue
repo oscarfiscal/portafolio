@@ -4,7 +4,7 @@
       <div class="about-content">
         <p>
           Soy un desarrollador de software con aproximadamente 4 años de experiencia, 
-          especializado en Backend y Business Intelligence. Me apasiona diseñar 
+          especializado en Backend y con conocimientos en Business Intelligence. Me apasiona diseñar 
           arquitecturas robustas y escalables en lenguajes como Java (Spring Boot), 
           PHP (Laravel, Symfony) y Node.js, aplicando metodologías como TDD, SOLID 
           y patrones de diseño.
