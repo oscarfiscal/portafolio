@@ -342,5 +342,39 @@
     width: 100%;
     height: auto;
   }
+  .contact-links {
+    margin-top: 2rem;
+    text-align: center;
+  }
+  
+  .link-list {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+  
+  .link-list a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #64f4ac;
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .link-list a:hover {
+    transform: scale(1.05);
+    color: #52d193;
+  }
+  
+  .link-list .icon {
+    width: 36px;
+    height: 36px;
+    margin-bottom: 0.5rem;
+    fill: currentColor;
+  }
+  
   
     
