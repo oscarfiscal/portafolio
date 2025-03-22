@@ -324,4 +324,23 @@
   .contact-links a:hover {
     color: #52d193;
   }
+
+  .whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  .whatsapp-float:hover {
+    transform: scale(1.1);
+  }
+  .whatsapp-float img {
+    width: 100%;
+    height: auto;
+  }
+  
     
