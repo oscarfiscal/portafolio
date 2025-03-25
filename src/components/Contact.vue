@@ -93,9 +93,8 @@ const formPhone = ref("");
 const formMessage = ref("");
 const statusMsg = ref("");
 
-// Ajusta estos valores a tu token y chat ID
-const TELEGRAM_BOT_TOKEN = "8130090156:AAEadD9CoQofCsGhpjaWYI0YEJWOb5PDxXw";
-const TELEGRAM_CHAT_ID = 6246067242;
+const TELEGRAM_BOT_TOKEN = import.meta.env.VITE_TELEGRAM_BOT_TOKEN;
+const TELEGRAM_CHAT_ID = import.meta.env.VITE_TELEGRAM_CHAT_ID;
 
 const sendTelegram = async () => {
   statusMsg.value = "Enviando...";
